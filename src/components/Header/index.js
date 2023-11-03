@@ -3,6 +3,7 @@ function Header(){
     return(
         <>
         <header>
+            <img className="logo" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="logo"/>
         <ul>
                 <li>
                     <a href="/">
