@@ -7,6 +7,7 @@ import Header from "../../components/Header";
 
 function Home() {
   const [filmes, setFilmes] = useState([]);
+  const [loading, setLoading] = useState([true]);
 
   useEffect(() => {
     async function loadFilmes() {
@@ -17,12 +18,22 @@ function Home() {
           page: 1,
         }
       })  
-      setFilmes(response.data.results.slice(0,10))   
+      setFilmes(response.data.results.slice(0,10))
+      setLoading(false)
     }
 
     loadFilmes();
   }, []);
 
+  if(loading){
+    return(
+      <div className="loading">        
+       <img src="img/loading.svg" alt="loading"/>
+       <h3>Carregando</h3>
+      </div>
+    )
+  }
+  
   return (
     <>
     <Header/>
