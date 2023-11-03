@@ -16,7 +16,8 @@ function Home() {
           language: "pt-BR",
           page: 1,
         }
-      })     
+      })  
+      setFilmes(response.data.results.slice(0,10))   
     }
 
     loadFilmes();
@@ -24,8 +25,19 @@ function Home() {
 
   return (
     <>
-      <Header />
-      <h1>BEM VINDO A HOME</h1>
+    <Header/>
+    <div className="container">
+      <ul className="lista-filmes">
+        {filmes.map((filme)=>{
+          return(            
+             <li key={filme.id}><h3>{filme.title}</h3>
+             <img className="film-poster" src={`https://image.tmdb.org/t/p/original${filme.poster_path}`} alt={filme.title}/>
+             <a href={`/filme/${filme.id}`}>Acessar</a>
+             </li>            
+          )
+        })}
+      </ul>
+    </div>
     </>
   );
 }
