@@ -9,6 +9,10 @@ body {
   font-family: sans-serif;
 }
 
+a:hover{
+  opacity: .8;
+}
+
 .app {
   display: flex;
   width: 100%;
@@ -33,14 +37,26 @@ header>.logo {
   max-width: 3rem;
 }
 
+header> .site-name{
+  color: white;
+  padding: 0 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
 header>ul {
-  width: 100%;
+  width: max-content;
   display: flex;
   justify-content: flex-end;
 }
 
 header>ul>li {
   margin: 0 1rem;
+}
+
+header>ul>li> a {
+  font-weight: 600;
+  color: white;
 }
 
 .container {
@@ -66,7 +82,13 @@ img.film-poster {
   width: 100%;
 }
 
-ul.lista-filmes>li > a {
+.poster-imdb {
+  margin-top: .25rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.large-btn {
   display: flex;
   background-color: blue;
   color: #fff;
@@ -75,26 +97,48 @@ ul.lista-filmes>li > a {
   align-items: center;
   justify-content: center;
   border-radius: 0 0 50% 0;
-  transition: 300ms linear; 
+  transition: 300ms linear;
 }
 
-ul.lista-filmes>li > a:hover {
+.large-btn:hover {
   border-radius: 0;
-  transition: 100ms linear; 
+  transition: 100ms linear;
 }
 
-.loading{
+.loading {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 40%;
 }
 
-.loading > h3{
+.loading>h3 {
   animation: blink 4s infinite;
 }
+
 @keyframes blink {
-  0% { opacity: 1; }
-  50% { opacity: .25 }
-  100% { opacity: 1; }
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .25
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.not-found {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#image-404 {
+  max-width: 80%;
+  margin: auto;
 }
