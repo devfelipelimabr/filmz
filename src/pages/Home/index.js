@@ -28,7 +28,7 @@ function Home() {
   if(loading){
     return(
       <div className="loading">        
-       <img src="img/loading.svg" alt="loading"/>
+       <img src="/img/loading.svg" alt="loading"/>
        <h3>Carregando</h3>
       </div>
     )
@@ -41,10 +41,14 @@ function Home() {
       <ul className="lista-filmes">
         {filmes.map((filme)=>{
           return(            
-             <li key={filme.id}><h3>{filme.title}</h3>
+             <li key={filme.id}>
+              <div className="film">
+              <h3>{filme.title}</h3>             
              <img className="film-poster" src={`https://image.tmdb.org/t/p/original${filme.poster_path}`} alt={filme.title}/>
-             <a href={`/filme/${filme.id}`}>Acessar</a>
-             </li>            
+             <a className="large-btn" href={`/filme/${filme.id}`}>Acessar</a>
+             </div>
+             <span className="poster-imdb">imdb - {parseFloat(filme.vote_average).toFixed(1)} / 10</span>
+             </li>       
           )
         })}
       </ul>
