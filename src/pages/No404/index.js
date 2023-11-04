@@ -4,11 +4,11 @@ function No404(){
     return(
         <>
         <Header/>
-        <section>
-            <h1 className="centerPage">
-                PÁGINA NÃO ENCONTRADA
+        <section className="not-found">
+            <h1>
+                PÁGINA NÃO ENCONTRADA!
             </h1><br/>
-           
+           <img id="image-404" src="/img/not-found.svg" alt="not-found"/>
         </section>
         </>
     )
