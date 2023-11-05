@@ -287,3 +287,25 @@ scale: 1.1;
   max-width: 80%;
   margin: auto;
 }
+
+/* Estilos para a paginação */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.page-button:disabled {
+  background-color: #ddd;
+  color: #999;
+  cursor: not-allowed;
+}
