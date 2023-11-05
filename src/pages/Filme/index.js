@@ -5,6 +5,7 @@ import api from "../../services/api";
 
 import Header from "../../components/Header";
 import No404 from "../No404";
+import Footer from "../../components/Footer";
 
 // URL da API movie/id?api_key=f9fef8f91d4973d6573a77bfac45823f&language=pt-BR
 
@@ -120,6 +121,7 @@ function Filme() {
           </li>
         </ul>
       </div>
+      <Footer  className="fixed"/>
     </>
   );
 }

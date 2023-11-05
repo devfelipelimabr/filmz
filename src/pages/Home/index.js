@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import api from "../../services/api";
 
 import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 function Home() {
   const [filmes, setFilmes] = useState([]);
@@ -117,6 +118,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 }
