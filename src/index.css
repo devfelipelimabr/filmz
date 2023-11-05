@@ -109,7 +109,7 @@ img.film-poster {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40%;
+  margin-top: 25%;
 }
 
 .loading>h3 {
