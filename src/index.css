@@ -127,8 +127,8 @@ img.film-poster {
 
 img.film-info-poster {
   width: 240px;
-  max-width: 30vw;
-  height: 35vw;  
+  height: 360px;  
+  max-height: 360px;
   object-fit: cover;
   object-position: center;
   border-radius: 5px;
@@ -143,8 +143,8 @@ img.film-info-poster {
 
 .play{
   position: absolute;
-  top: 12vw;
-  left: 8vw;
+  top: 132px;
+  left: 72px;
   width: 40%;
   opacity: .9;
   transition: all 100ms linear;
