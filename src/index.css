@@ -72,7 +72,6 @@ ul.lista-filmes {
 }
 
 ul.lista-filmes>li {
-  width: 30%;
   display: flex;
   flex-direction: column;
   margin: .5rem;
@@ -80,6 +79,11 @@ ul.lista-filmes>li {
 
 img.film-poster {
   width: 100%;
+}
+
+.film{
+  width: 100%;
+  max-width: 320px;
 }
 
 .poster-imdb {
