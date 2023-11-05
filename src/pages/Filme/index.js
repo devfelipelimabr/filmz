@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import api from "../../services/api";
@@ -73,11 +74,21 @@ function Filme() {
     <>
       <Header />
       <div className="film-container">
-        <img
-          className="film-poster"
-          src={`https://image.tmdb.org/t/p/original${filme.backdrop_path}`}
-          alt={filme.title}
-        />
+      
+        <div className="trailer-image">
+          <img
+            className="film-info-poster"
+            src={`https://image.tmdb.org/t/p/original${filme.backdrop_path}`}
+            alt={filme.title}
+          />
+          <a href={`https://youtube.com/results?search_query=trailer+${filme.title}`}
+              target="_blank"
+              rel="noopener noreferrer external"
+            >
+          <img className="play" src="/img/play-button-svgrepo-com.svg" />
+          </a>
+        </div>
+        
         <ul className="filme-info">
           <li>
             <h1 className="top-title">{filme.title}</h1>
@@ -85,10 +96,10 @@ function Filme() {
           <li>
             <ul className="row">
               <li className="imdb">
-                <h5>imdb</h5>
-                <span>{parseFloat(filme.vote_average).toFixed(1)}</span>
+                <h3>imdb</h3>
+                <h4>{parseFloat(filme.vote_average).toFixed(1)}</h4>
               </li>
-              <li>
+              <li className="genres">
                 {filme.genres.map((genre, index) => (
                   <span key={genre.id}>
                     {genre.name}
@@ -98,22 +109,16 @@ function Filme() {
               </li>
             </ul>
           </li>
-          <li>
+          <li className="synopsis">
             <h4>sinopse</h4>
             <p>{filme.overview ? filme.overview : `Sinopse indisponível :(`}</p>
           </li>
+          <li className="area-btns">
+            <button className="btn" onClick={salvarFilme}>
+              salvar
+            </button>           
+          </li>
         </ul>
-        <div className="area-btns">
-          <button onClick={salvarFilme}>salvar</button>
-          <a
-            className="btn"
-            href={`https://youtube.com/results?search_query=trailer+${filme.title}`}
-            target="_blank"
-            rel="noopener noreferrer external"
-          >
-            trailer
-          </a>
-        </div>
       </div>
     </>
   );

@@ -43,7 +43,7 @@ function Home() {
           return(            
              <li key={filme.id}>
               <div className="film">
-              <h3>{filme.title}</h3>             
+              <h2>{filme.title}</h2>             
              <img className="film-poster" src={`https://image.tmdb.org/t/p/original${filme.poster_path}`} alt={filme.title}/>
              <a className="large-btn" href={`/filme/${filme.id}`}>Acessar</a>
              </div>
