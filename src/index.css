@@ -263,6 +263,26 @@ img.film-info-poster {
   transition: 100ms linear;
 }
 
+.remove-btn{
+  border: none;
+  outline: none;
+  padding: .5rem;
+  margin-top: .5rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: var(--secondary-color);
+  color: white;
+  transition: 300ms linear;
+}
+
+.remove-btn:hover{
+  opacity: .8;
+  transition: all 300ms linear;
+}
+
 .loading {
   display: flex;
   flex-direction: column;
