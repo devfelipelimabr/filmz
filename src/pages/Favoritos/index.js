@@ -24,6 +24,18 @@ function Favoritos() {
     localStorage.setItem("@filmez", JSON.stringify(novosFilmes));
   };
 
+  if (filmes.length < 1){
+    return(
+      <>
+      <Header/>
+      <span className="no-content">
+      Você não possui filmes favoritados 😟
+      </span>
+      <Footer/>
+      </>
+    )
+  }
+
   return (
     <>
       <Header />

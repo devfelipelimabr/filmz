@@ -321,6 +321,14 @@ img.film-info-poster {
   margin: auto;
 }
 
+.no-content{
+  display: flex;
+  justify-content: center;
+  margin: 30vh auto;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
 /* Estilos para a paginação */
 .pagination {
   display: flex;
