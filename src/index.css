@@ -323,6 +323,10 @@ img.film-info-poster {
   cursor: not-allowed;
 }
 
+.page-input{
+  display: flex;
+}
+
 /* FOOTER */
 footer {
   background-color: black;
